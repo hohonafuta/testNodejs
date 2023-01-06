@@ -1,0 +1,25 @@
+{
+  "name": "testnodejs",
+  "version": "1.0.0",
+  "description": "test Nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hohonafuta/testNodejs.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "nafuta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hohonafuta/testNodejs/issues"
+  },
+  "homepage": "https://github.com/hohonafuta/testNodejs#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
