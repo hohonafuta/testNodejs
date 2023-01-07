@@ -14,12 +14,8 @@
 
 // 따라서 우리는 router.js 모듈을 index.js에서 로드하고 route() 함수를 server로 넘깁니다.
 
-function route(pathname,response) {
+function route(pathname) {
     console.log('about to route a request for ' + pathname);
-
-    response.writeHead(200, {'Content-Type' : 'text/plain'});
-    response.write('!!!! Hello World !!!!!!');
-    //response.end();
 }
 
 exports.route = route;

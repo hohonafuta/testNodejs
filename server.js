@@ -11,10 +11,9 @@ function start(route) {
         var pathname = url.parse(request.url).pathname;
         console.log('request for ' + pathname + ' received.');
 
-        // route(pathname); // injected function call
-        route(pathname,response); // injected function call
-
-        //response.writeHead(200, {'Content-Type' : 'text/plain'});
+        route(pathname); // injected function call
+        
+        response.writeHead(200, {'Content-Type' : 'text/plain'});
         response.write('Hello World');
         response.end();
     }
