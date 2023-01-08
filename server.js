@@ -6,16 +6,13 @@
 var http = require('http');
 var url = require('url');
 
-function start(route) {
+function start(route, handle) {
     function onRequest(request, response) {
         var pathname = url.parse(request.url).pathname;
         console.log('request for ' + pathname + ' received.');
 
-        route(pathname); // injected function call
-        
-        response.writeHead(200, {'Content-Type' : 'text/plain'});
-        response.write('Hello World');
-        response.end();
+        route(handle, pathname, response); // injected function call
+
     }
 
     http.createServer(onRequest).listen(1337);
